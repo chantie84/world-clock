@@ -2,6 +2,10 @@ body {
   background: purple;
   color: azure;
 }
-h1 {
+h1,
+footer {
   text-align: center;
+}
+a {
+  color: aquamarine;
 }
