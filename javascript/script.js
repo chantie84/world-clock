@@ -20,6 +20,17 @@ function updateTime() {
   sydneyTimeElement.innerHTML = sydneyTime.format(
     "h:mm:ss [<small>]A[</small>]"
   );
+
+  let honoluluElement = document.querySelector("#honolulu");
+  let honoluluDateElement = honoluluElement.querySelector(".date");
+  let honoluluTimeElement = honoluluElement.querySelector(".time");
+  let honoluluTime = moment().tz("Pacific/Honolulu");
+
+  honoluluDateElement.innerHTML = honoluluTime.format("MMMM Do YYYY");
+
+  honoluluTimeElement.innerHTML = honoluluTime.format(
+    "h:mm:ss [<small>]A[</small>]"
+  );
 }
 function updateCity(event) {
   let cityTimeZone = event.target.value;
